@@ -1,18 +1,19 @@
 #include <iostream>
-#include<vector>
+#include <vector>
 using namespace std;
 
-
-
-// Function to rearrange the array such that all positive elements are on the left side and all negative elements are on the right side
+// Function to rearrange the array such that all positive elements are on the
+// left side and all negative elements are on the right side
 void getthearray(int l, int h, vector<int> v) {
   // Loop until the left pointer is less than the right pointer
   while (l < h) {
-    // If the element at the left pointer is negative, increment the left pointer
+    // If the element at the left pointer is negative, increment the left
+    // pointer
     if (v[l] < 0) {
       l++;
     }
-    // If the element at the right pointer is positive, decrement the right pointer
+    //// If the element at the right pointer is positive, decrement the right
+    ///pointer
     else if (v[h] > 0) {
       h--;
     }
@@ -21,6 +22,8 @@ void getthearray(int l, int h, vector<int> v) {
       swap(v[l], v[h]);
     }
   }
+
+  
 
   // Print the rearranged array
   for (int i = 0; i < v.size(); i++) {
